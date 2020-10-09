@@ -1,0 +1,20 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+// Colors
+$color-primary-dark: mat-color(mat-palette($mat-indigo, 900));
+$color-white: mat-color(mat-palette($mat-grey, 50));
+$color-black: mat-color(mat-palette($mat-grey, 900));
+$color-grey: mat-color(mat-palette($mat-grey, 700));
+
+// Font
+$alternative-font-family: 'Ubuntu, sans-serif';
+$custom-typography: mat-typography-config(
+  $font-family: 'Open Sans, monospace',
+  $headline: mat-typography-level(2.4rem, 3.2rem, 400, $alternative-font-family)
+);
+
+@include mat-base-typography($custom-typography);
+@include mat-checkbox-typography($custom-typography);
+@include angular-material-typography($custom-typography);
+@include mat-core($custom-typography);
