@@ -1,0 +1,28 @@
+@import '../../../../scss/variables';
+
+.lessons-section {
+  position: relative;
+  background-color: $color-grey-light;
+  padding: 10rem 0;
+  text-align: center;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 40rem;
+  position: absolute;
+  left: 0;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}

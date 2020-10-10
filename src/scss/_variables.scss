@@ -3,9 +3,11 @@
 
 // Colors
 $color-primary-dark: mat-color(mat-palette($mat-indigo, 900));
+$color-primary-light: mat-color(mat-palette($mat-indigo, 200));
 $color-white: mat-color(mat-palette($mat-grey, 50));
 $color-black: mat-color(mat-palette($mat-grey, 900));
 $color-grey: mat-color(mat-palette($mat-grey, 700));
+$color-grey-light: mat-color(mat-palette($mat-grey, 200));
 
 // Font
 $alternative-font-family: 'Ubuntu, sans-serif';
