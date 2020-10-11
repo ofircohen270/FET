@@ -19,4 +19,8 @@ export class LessonCardComponent implements OnInit {
     this.rotated = !this.rotated
   }
 
+  setPercentageWatched(percentageWatched: number) {
+    console.log(percentageWatched)
+  }
+
 }
