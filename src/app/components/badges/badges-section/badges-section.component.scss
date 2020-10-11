@@ -1,0 +1,16 @@
+@import "../../../../scss/variables";
+
+.badges-section {
+    padding: 7rem 10rem;
+}
+
+.badge {
+    background-clip: text;
+    color: transparent;
+    transform: scale(7); // For the size
+    margin: 6rem auto 8.5rem;
+
+    animation-name: fadeIn;
+    animation-duration: .5s;
+    animation-timing-function: ease-out;
+}

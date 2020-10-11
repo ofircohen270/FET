@@ -20,7 +20,7 @@ export class LessonCardComponent implements OnInit {
   }
 
   setPercentageWatched(percentageWatched: number) {
-    console.log(percentageWatched)
+    this.lesson.percentageWatched = percentageWatched
   }
 
 }

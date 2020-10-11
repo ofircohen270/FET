@@ -5,24 +5,7 @@
   background-color: $color-grey-light;
   padding: 10rem 0;
   text-align: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.sidenav-container {
-  height: 100%;
-}
-
-.sidenav {
-  width: 40rem;
-  position: absolute;
-  left: 0;
-}
-
-.sidenav .mat-toolbar {
-  background: inherit;
-}
-
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}

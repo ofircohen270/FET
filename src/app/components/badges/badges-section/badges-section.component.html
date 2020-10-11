@@ -1,0 +1,9 @@
+<div class="badges-section">
+    <h2>Badges</h2>
+    <div *ngFor="let lesson of lessons">
+        <div *ngIf="lesson.percentageWatched" class="badge"
+            [ngStyle]="{backgroundImage: 'linear-gradient(to top, #1a237e 0%, #9fa8da ' + getPercentage(lesson.percentageWatched) + '%, #dededeb3 ' + getPercentage(lesson.percentageWatched) + '%)'}">
+            <mat-icon class="badge__icon" [inline]="true">military_tech</mat-icon>
+        </div>
+    </div>
+</div>
