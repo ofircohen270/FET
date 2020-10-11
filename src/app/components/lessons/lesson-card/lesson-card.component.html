@@ -1,0 +1,18 @@
+<div class="card lesson-card" [ngClass]="{'rotated': rotated}">
+    <div class="card__side card__side--front">
+        <div class="lesson-card__picture-container" [style.backgroundImage]="'url(' + lesson.imageUrl + ')'">
+            <img class="lesson-card__picture" [src]="lesson.imageUrl">
+            <button class="btn btn--white btn--animated lesson-card__button" (click)="toggleCardRotated()">Watch
+                lesson</button>
+        </div>
+        <h4 class="lesson-card__heading">
+            {{lesson.name}}
+        </h4>
+    </div>
+    <div class="card__side card__side--back">
+        <div class="lesson-card__player-title">{{lesson.name}}</div>
+        <iframe type="text/html" width="640" height="360"
+        src="https://www.youtube.com/embed/N33P4T5TWJk?autoplay=1&origin=http://localhost:4200"
+        frameborder="0"></iframe>
+    </div>
+</div>

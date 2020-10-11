@@ -1,5 +1,6 @@
 <section class="lessons-section">
     <h2 class="heading-secondary">Exciting lessons for ambisios people</h2>
+    <app-lesson-card *ngFor="let lesson of lessons" [lesson]="lesson"></app-lesson-card>
     
     <!-- <mat-sidenav-container class="sidenav-container"> -->
 <!--         
