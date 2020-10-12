@@ -3,6 +3,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatIconModule } from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +28,7 @@ import { LessonsSectionComponent } from './components/lessons/lessons-section/le
     LayoutModule,
     BrowserModule,
     MatIconModule,
+    MatButtonModule,
     AppRoutingModule,
     MatSidenavModule,
     YouTubePlayerModule,

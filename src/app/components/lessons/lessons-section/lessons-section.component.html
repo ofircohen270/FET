@@ -1,13 +1,11 @@
 <mat-drawer-container class="lessons-section" id="lessons-section">
+    <button mat-mini-fab color="primary" class="badges-button" type="button" (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+        <mat-icon>military_tech</mat-icon>
+    </button>
 
-    <div>
-        <button type="button" mat-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
-            View Badges
-        </button>
-        <h2 class="heading-secondary">Exciting lessons for ambitious people</h2>
-        <app-video-player></app-video-player>
-        <app-lesson-card *ngFor="let lesson of lessons" [lesson]="lesson"></app-lesson-card>
-    </div>
+    <h2 class="heading-secondary">Exciting lessons for ambitious people</h2>
+    <app-video-player></app-video-player>
+    <app-lesson-card *ngFor="let lesson of lessons" [lesson]="lesson"></app-lesson-card>
 
     <mat-drawer #drawer [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)" position="end">
         <app-badges-section></app-badges-section>

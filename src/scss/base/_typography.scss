@@ -1,3 +1,5 @@
+@import "mixin";
+
 .heading-primary {
     color: $color-white;
     text-transform: uppercase;
@@ -16,10 +18,10 @@
         animation-duration: 1s;
         animation-timing-function: ease-out;
 
-        // @include respond(phone) {
-        //     letter-spacing: 1rem;
-        //     font-family: 5rem;
-        // }
+        @include respond(phone) {
+            letter-spacing: .8rem;
+            font-size: 4.5rem;
+        }
     }
     
     &--sub {
@@ -30,9 +32,10 @@
         letter-spacing: .65rem;
         animation: moveInRight 1s ease-out;
 
-        // @include respond(phone) {
-        //     letter-spacing: .5rem;
-        // }
+        @include respond(phone) {
+            letter-spacing: .3rem;
+            font-size: 1.3rem;
+        }
     }
 }
 
@@ -47,13 +50,14 @@
     letter-spacing: .2rem;
     transition: all .2s;
 
-    // @include respond(tab-port) {
-    //     font-size: 3rem;
-    // }
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
 
-    // @include respond(phone) {
-    //     font-size: 2.5rem;
-    // }
+    @include respond(phone) {
+        font-size: 2.5rem;
+
+    }
 
     &:hover {
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);

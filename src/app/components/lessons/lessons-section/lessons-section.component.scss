@@ -1,4 +1,4 @@
-@import '../../../../scss/variables';
+@import "../../../../scss/variables";
 
 .lessons-section {
   position: relative;
@@ -6,5 +6,9 @@
   padding: 10rem 0;
   text-align: center;
   width: 100%;
-  margin: 0 auto;
+}
+
+.badges-button {
+  float: right;
+  margin: 0 2rem 2rem;
 }

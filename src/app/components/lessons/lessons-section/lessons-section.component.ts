@@ -13,19 +13,19 @@ export class LessonsSectionComponent implements OnInit {
   lessons: Lesson[] = [
     {
       id: 0,
-      name: "Lesson 1 - Introduction to photography",
+      name: "Lesson 1 - Let the fun begin",
       imageUrl: "../assets/img/lesson1.jpg",
       videoId: "N33P4T5TWJk"
     },
     {
       id: 1,
-      name: "Lesson 2 - Choose your camera",
+      name: "Lesson 2 - About photos",
       imageUrl: "../assets/img/lesson2.jpg",
       videoId: "N33P4T5TWJk"
     },
     {
       id: 2,
-      name: "Lesson 3 - capturing the view",
+      name: "Lesson 3 - Capturing the view",
       imageUrl: "../assets/img/lesson3.jpg",
       videoId: "N33P4T5TWJk"
     },
