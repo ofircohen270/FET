@@ -11,6 +11,6 @@
     </div>
     <div class="card__side card__side--back">
         <div class="lesson-card__player-title">{{lesson.name}}</div>
-        <app-video-player videoId="N33P4T5TWJk" (onPercentageWatchedChange)="setPercentageWatched($event)"></app-video-player>
+        <app-video-player videoId="N33P4T5TWJk" (onDataChange)="setSecondsWatched($event)"></app-video-player>
     </div>
 </div>

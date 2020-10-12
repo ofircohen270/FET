@@ -1,5 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
+export interface VideoPlayerData {
+  secondsWatched: { [second: number]: boolean },
+  videoDuration: number
+}
+
 @Component({
   selector: 'app-video-player',
   templateUrl: './video-player.component.html',
@@ -7,11 +12,14 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class VideoPlayerComponent implements OnInit {
   @Input() videoId: string;
-  @Output() onPercentageWatchedChange = new EventEmitter<number>();
+  @Output() onDataChange = new EventEmitter<VideoPlayerData>();
 
-  secondsWatchedRecord = [];
-  timer;
-  percentageWatched: number; // How much percentage of the video was watched
+  // Video Player Data
+  videoDuration: number;
+  secondsWatched: { [second: number]: boolean } = {};
+  numberOfSecondsWatched: number = 0;
+
+  timer: NodeJS.Timeout;
 
   constructor() { }
 
@@ -22,34 +30,32 @@ export class VideoPlayerComponent implements OnInit {
     document.body.appendChild(tag);
   }
 
-  stateChange(event) {
-    if (event.data === YT.PlayerState.PLAYING) { // Started playing
+  stateChange(event: YT.OnStateChangeEvent) {
+    if (event.data === YT.PlayerState.PLAYING) {
 
-      if (!this.secondsWatchedRecord.length) {
-        // Creates a list with length of the number of seconds of the video
-        this.secondsWatchedRecord = new Array(parseInt(event.target.getDuration()));
-      }
-      this.timer = setInterval(this.record.bind(this, event.target), 100);
+      if (!this.videoDuration) this.videoDuration = event.target.getDuration()
+      this.timer = setInterval(this.record.bind(this, event.target), 500);
 
     } else clearInterval(this.timer)
 
   }
 
-  record(player) {
-    this.secondsWatchedRecord[parseInt(player.getCurrentTime())] = true;
-    this.calcPercentage();
-  }
+  /**
+   * Adds the currently viewed second of the video to the record and emits the Video Player Data
+   * if there's a change in the number of seconds watched
+   * @param player 
+   */
+  record(player: YT.Player) {
+    this.secondsWatched[Math.round(player.getCurrentTime())] = true;
 
-  calcPercentage() {
-    const numberOfSecondsWatched = this.secondsWatchedRecord.filter(Boolean).length
+    const numberOfSecondsWatched = Object.keys(this.secondsWatched).length
 
-    const percentageWatched = Math.round(
-      numberOfSecondsWatched /
-      this.secondsWatchedRecord.length * 100);
-
-    if (this.percentageWatched !== percentageWatched) {
-      this.percentageWatched = percentageWatched
-      this.onPercentageWatchedChange.emit(this.percentageWatched)
+    if (numberOfSecondsWatched > this.numberOfSecondsWatched) {
+      this.numberOfSecondsWatched = numberOfSecondsWatched
+      this.onDataChange.emit({
+        videoDuration: this.videoDuration,
+        secondsWatched: this.secondsWatched
+      })
     }
   }
 }
