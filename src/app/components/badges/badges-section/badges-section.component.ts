@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { LessonsService } from 'src/app/services/lessons.service';
 import { VideoPlayerData } from '../../video-player/video-player.component';
@@ -20,7 +20,7 @@ export class BadgesSectionComponent implements OnInit {
   }
 
   /**
-   * Calculates the percentage of the lesson proggress according to the number of seconds of the video
+   * Calculates the percentage of the lesson progress according to the number of seconds of the video
    * that were watched. The data is taken from the lessons service which keeps a track of the watched seconds.
    * @param percentageWatched 
    */

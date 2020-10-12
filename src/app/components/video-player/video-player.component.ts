@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 export interface VideoPlayerData {
-  secondsWatched: { [second: number]: boolean },
+  secondsWatched: { [second: number]: boolean }, // A track of which seconds were watched
   videoDuration: number
 }
 

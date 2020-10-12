@@ -7,7 +7,7 @@ const LocalStorageItemName = 'lessonsVideoData'
   providedIn: 'root'
 })
 export class LessonsService {
-  // I am keeping a record of the lessons and their video data in the local storage
+  // Keeps a record of the lessons and their video data
   lessonsVideoData: { [lessonId: number]: VideoPlayerData }; 
 
   /**

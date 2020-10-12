@@ -4,12 +4,12 @@
         <div *ngFor="let lesson of lessonsVideoData | keyvalue ">
 
             <!-- The blue color in the linear-gradient color of the badge represents
-                 the percentage of the lesson that was whatched -->
+                 the percentage of the lesson that was watched -->
             <div *ngIf="lesson.value" class="badge" [ngStyle]="{backgroundImage: 
-                    'linear-gradient(to top, #1a237e 0%, #9fa8da ' 
+                    'linear-gradient(to top, #1a237e 0%, #9fa8da '
                     + getPercentage(lesson.value) + '%, #dededeb3 '
                      + getPercentage(lesson.value) + '%)'}">
-                <mat-icon class="badge__icon" [inline]="true">military_tech</mat-icon>
+                <mat-icon [inline]="true">military_tech</mat-icon>
             </div>
         </div>
     </div>
