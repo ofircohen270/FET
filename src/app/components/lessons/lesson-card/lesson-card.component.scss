@@ -16,7 +16,7 @@
         width: 100%;
         transform: scale(1.2);
         backface-visibility: hidden; // To fix animation bug
-        transition: all 0.5s;
+        transition: all .5s;
     }
 
     &:hover &__picture {
@@ -48,11 +48,5 @@
     &:hover &__button {
         opacity: 1;
         transform: translate(-50%, -50%);
-    }
-
-    &__player-title {
-        padding: 1rem 2rem;
-        text-align: left;
-        font-size: 1.7rem;
     }
 }

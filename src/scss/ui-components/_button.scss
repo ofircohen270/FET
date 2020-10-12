@@ -16,6 +16,15 @@
         cursor: pointer;
     }
     
+    &:disabled {
+        background-color: $color-grey;
+        cursor:  auto;
+
+        &::after {
+            display: none;
+        }
+    }
+
     &:hover {
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black,.2);
@@ -25,6 +34,11 @@
             opacity: 0;
         }
     }
+
+    &:disabled, &:hover {
+        transform: translateY(0);
+        box-shadow: none;
+    } 
     
     &:active,
     &:focus {
@@ -39,6 +53,15 @@
 
         &::after {
             background-color: $color-white;
+        }
+    }
+
+    &--primary {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-primary;
         }
     }
     
