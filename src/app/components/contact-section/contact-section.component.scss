@@ -1,0 +1,21 @@
+@import "../../../scss/variables";
+
+.contact-section {
+    padding: 10rem 0;
+    background-image: linear-gradient(to right, $color-primary-dark, $color-primary-light);
+
+    &__form {
+        border-radius: 3px;
+        width: 80%;
+        margin: 0 auto;
+        padding: 6rem;
+        background-color: rgba($color-white, .8);
+        text-align: center;
+    }
+
+    &__input {
+        width: 50%;
+        display: block;
+        margin: 0 auto 2rem;
+    }
+}

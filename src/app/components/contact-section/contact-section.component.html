@@ -1,0 +1,17 @@
+<section class="contact-section">
+    <form [formGroup]="ContactForm" class="contact-section__form" id="contact-form" (ngSubmit)="onSubmit()">
+        <h2 class="heading-secondary">Contact Us</h2>
+
+        <mat-form-field class="contact-section__input">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" type="email" placeholder="Ex. yourname@mail.com">
+        </mat-form-field>
+
+        <mat-form-field class="contact-section__input">
+            <mat-label>Leave a comment</mat-label>
+            <textarea formControlName="comment" matInput placeholder="Have any question? Let us know!"></textarea>
+        </mat-form-field>
+
+        <button type="submit" class="btn btn--primary" [disabled]="!ContactForm.valid">Send</button>
+    </form>
+</section>
