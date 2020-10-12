@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+
 import { Lesson } from 'src/app/interfaces/lesson';
+import { LessonsService } from 'src/app/services/lessons.service';
 
 @Component({
   selector: 'app-badges-section',
@@ -8,11 +10,13 @@ import { Lesson } from 'src/app/interfaces/lesson';
 })
 export class BadgesSectionComponent implements OnInit {
 
-  @Input() lessons: Lesson[] = []
+  watchedLessonsPrecentage: { [lessonId: number]: number };
 
-  constructor() { }
+  constructor(private lessonsService: LessonsService) {
+  }
 
   ngOnInit(): void {
+    this.watchedLessonsPrecentage = this.lessonsService.getWatchedLessonsPrecentage()
   }
 
   /**

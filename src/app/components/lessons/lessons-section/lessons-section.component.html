@@ -10,7 +10,7 @@
     </div>
 
     <mat-drawer #drawer [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)" position="end">
-        <app-badges-section [lessons]="lessons"></app-badges-section>
+        <app-badges-section></app-badges-section>
     </mat-drawer>
 
 </mat-drawer-container>

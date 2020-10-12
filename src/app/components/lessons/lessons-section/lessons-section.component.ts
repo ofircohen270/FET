@@ -12,22 +12,27 @@ import { Lesson } from 'src/app/interfaces/lesson';
 export class LessonsSectionComponent implements OnInit {
   lessons: Lesson[] = [
     {
+      id: 0,
       name: "Lesson 1 - Introduction to photography",
       imageUrl: "../assets/img/lesson1.jpg"
     },
     {
+      id: 1,
       name: "Lesson 2 - Choose your camera",
       imageUrl: "../assets/img/lesson2.jpg"
     },
     {
+      id: 2,
       name: "Lesson 3 - capturing the view",
       imageUrl: "../assets/img/lesson3.jpg"
     },
     {
+      id: 3,
       name: "Lesson 4 - Do it like a pro",
       imageUrl: "../assets/img/lesson4.jpg"
     },
     {
+      id: 4,
       name: "Lesson 5 - Conclusion",
       imageUrl: "../assets/img/lesson5.jpg"
     }
