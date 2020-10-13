@@ -22,7 +22,7 @@ export class BadgesSectionComponent implements OnInit {
   /**
    * Calculates the percentage of the lesson progress according to the number of seconds of the video
    * that were watched. The data is taken from the lessons service which keeps a track of the watched seconds.
-   * @param percentageWatched 
+   * @param lessonVideoData 
    */
   getPercentage(lessonVideoData: VideoPlayerData) {
     const numberOfSecondsWatched = Object.keys(lessonVideoData.secondsWatched).length

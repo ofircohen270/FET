@@ -4,7 +4,6 @@
     </button>
 
     <h2 class="heading-secondary">Exciting lessons for ambitious people</h2>
-    <app-video-player></app-video-player>
     <app-lesson-card *ngFor="let lesson of lessons" [lesson]="lesson"></app-lesson-card>
 
     <mat-drawer #drawer [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)" position="end">
