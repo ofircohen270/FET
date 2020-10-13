@@ -1,4 +1,5 @@
 @import "../../../scss/variables";
+@import "../../../scss/base/mixin";
 
 .contact-section {
     padding: 10rem 0;
@@ -17,5 +18,9 @@
         width: 50%;
         display: block;
         margin: 0 auto 2rem;
+
+        @include respond(phone) {
+            width: 100%;
+        }
     }
 }
