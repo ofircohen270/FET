@@ -17,4 +17,11 @@
     height: 7rem;
     padding-top: 3rem;
     margin: 2rem auto;
+    cursor: default;
+    transition: all 0.2s ease;
+
+    &:hover {
+        transform: translateY(-3px);
+        text-shadow: 0 0.7rem 2rem rgba($color-black, 0.2);
+    }
 }
