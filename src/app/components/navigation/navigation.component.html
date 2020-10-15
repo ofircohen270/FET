@@ -1,0 +1,17 @@
+<div class="navigation" [class.open]="open">
+    <div class="navigation__button" (click)="toggleOpen()">
+        <span class="navigation__icon">&nbsp;</span>
+    </div>
+
+    <div class="navigation__background">&nbsp;</div>
+
+    <nav class="navigation__nav">
+        <ul class="navigation__list">
+            <li class="navigation__item" *ngFor="let navigationLink of navigationLinks; let index = index" (click)="toggleOpen()">
+                <a [href]="'#' + navigationLink.link" class="navigation__link">
+                    <span>0{{ index + 1 }}</span>{{ navigationLink.name }}
+                </a>
+            </li>
+            </ul>
+    </nav>
+</div>

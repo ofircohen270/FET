@@ -22,6 +22,7 @@ import { LessonCardComponent } from './components/lessons/lesson-card/lesson-car
 import { BadgesSectionComponent } from './components/badges/badges-section/badges-section.component';
 import { LessonsSectionComponent } from './components/lessons/lessons-section/lessons-section.component';
 import { ContactSectionComponent } from './components/contact-section/contact-section.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ContactSectionComponent } from './components/contact-section/contact-se
     HeroSectionComponent,
     BadgesSectionComponent,
     LessonsSectionComponent,
-    ContactSectionComponent
+    ContactSectionComponent,
+    NavigationComponent
   ],
   imports: [
     FormsModule,
