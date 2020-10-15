@@ -2,12 +2,19 @@
 
 .badges-section {
     padding: 7rem 10rem;
+    right: 0;
+
+    &.sticky {
+        position: fixed;
+        top: 0;
+    }
 }
 
 .badge {
     background-clip: text;
     color: transparent;
-    transform: scale(7); // For the size
-    margin: 6rem auto 8.5rem;
-    width: 2rem;
+    font-size: 7rem;
+    height: 7rem;
+    padding-top: 3rem;
+    margin: 2rem auto;
 }

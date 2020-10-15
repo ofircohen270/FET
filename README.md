@@ -14,3 +14,6 @@ Academix contains:
         When the user starts watching a video, a badge appears and it is filled with color *according to the percentage of the video that was watched* wooow soo cool. It is presitent and stays on refresh.
 - Contact Section:
     The user can leave a comment with a question. Currently it goes nowhere :) 
+
+# Resources
+- For the pictures I used `https://unsplash.com/` - my #1 resource for free high-resolution photos. 10 new photos every 10 days.

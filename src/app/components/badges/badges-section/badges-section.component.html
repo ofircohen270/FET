@@ -1,4 +1,4 @@
-<div class="badges-section">
+<div class="badges-section" #badgesSection [class.sticky]="sticky">
     <h2>Badges</h2>
     <div>
         <div *ngFor="let lesson of lessonsVideoData | keyvalue ">

@@ -54,5 +54,5 @@ export class LessonsSectionComponent implements OnInit {
     .pipe(
       map(result => result.matches),
       shareReplay()
-    );
+    );  
 }
