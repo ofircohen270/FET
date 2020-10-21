@@ -16,24 +16,25 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
 // Components
 import { AppComponent } from './app.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { LessonCardComponent } from './components/lessons/lesson-card/lesson-card.component';
+import { ContactSectionComponent } from './components/contact-section/contact-section.component';
+import { LearnMorePopupComponent } from './components/learn-more-popup/learn-more-popup.component';
 import { BadgesSectionComponent } from './components/badges/badges-section/badges-section.component';
 import { LessonsSectionComponent } from './components/lessons/lessons-section/lessons-section.component';
-import { ContactSectionComponent } from './components/contact-section/contact-section.component';
-import { NavigationComponent } from './components/navigation/navigation.component';
-
 @NgModule({
   declarations: [
     AppComponent,
     LessonCardComponent,
+    NavigationComponent,
     VideoPlayerComponent,
     HeroSectionComponent,
     BadgesSectionComponent,
     LessonsSectionComponent,
     ContactSectionComponent,
-    NavigationComponent
+    LearnMorePopupComponent
   ],
   imports: [
     FormsModule,
